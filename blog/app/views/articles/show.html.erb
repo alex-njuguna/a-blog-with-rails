@@ -6,4 +6,18 @@
 	<li>
 		<%= link_to "Edit", edit_article_path(@article) %>
 	</li>
+	<li>
+		<%= link_to "Destroy", article_path(@article), data: {
+			turbo_method: :delete,
+			turbo_confirm: "Are you sure?"
+		} %>
+	</li>
 </ul>
+
+					<!-- comments -->
+<h4>Add a comment</h4>
+<%= render "comments/form" %>
+
+<h4>Comments</h4>
+<%= render @article.comments %>
+	

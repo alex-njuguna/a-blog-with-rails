@@ -1,0 +1,10 @@
+<% unless comment.archived? %>
+	<p>
+		<%= comment.commenter %>
+	</p>
+
+	<p>
+		<%= comment.body %>
+	</p>
+<% end %>
+
